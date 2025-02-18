@@ -32,7 +32,7 @@ namespace login
 			string usuario = txtUsuario.Text;
 			string contraseña = txtcontraseña.Text;
 			
-			MessageBox.Show("Intentando validar: ${usuario} / ${contraseña}", "Depuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			
 			
 			if(ValidarUsuario(usuario, contraseña))
 			{

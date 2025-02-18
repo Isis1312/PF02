@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="coleccion.cs" />
+    <Compile Include="coleccionProceso.cs" />
     <Compile Include="conocenos.cs" />
     <Compile Include="conocenos.Designer.cs">
       <DependentUpon>conocenos.cs</DependentUpon>
@@ -59,19 +60,19 @@
     <Compile Include="formsSistema.Designer.cs">
       <DependentUpon>formsSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionProcesos.cs" />
+    <Compile Include="FrmGestionProcesos.Designer.cs">
+      <DependentUpon>FrmGestionProcesos.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestionAu.cs" />
     <Compile Include="gestionAu.Designer.cs">
       <DependentUpon>gestionAu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionFormns.cs" />
-    <Compile Include="GestionFormns.Designer.cs">
-      <DependentUpon>GestionFormns.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionProceso.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proceso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="programo.cs" />
     <Compile Include="programo.Designer.cs">
@@ -96,11 +97,11 @@
     <EmbeddedResource Include="formsSistema.resx">
       <DependentUpon>formsSistema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionProcesos.resx">
+      <DependentUpon>FrmGestionProcesos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gestionAu.resx">
       <DependentUpon>gestionAu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionFormns.resx">
-      <DependentUpon>GestionFormns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -35,6 +35,9 @@ namespace login
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
+			this.Hide();
+			FrmGestionProcesos ventana = new FrmGestionProcesos();
+			ventana.Show();
 	
 		}
 		void CypbtClick(object sender, EventArgs e)

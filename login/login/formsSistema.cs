@@ -51,8 +51,7 @@ namespace login
                 DateTime final = dtpFin.Value;
 
                 // Crear nuevo sistema
-                Sistema sistema = new Sistema(empresa, rif, direccion, auditoria, inicio, final);
-
+                Sistema sistema = new Sistema();
                 // Se agrega a la colección
                 coleccionSistemas.agregar(sistema);
 
@@ -92,8 +91,9 @@ namespace login
 			            txtRIF.Text = sistema.RIF;
 			            txtDireccion.Text = sistema.Direccion;
 			            txtAuditoria.Text = sistema.Auditoria;
-			            dtpInicio.Value = sistema.Inicio;
-			            dtpFin.Value = sistema.Final;
+  
+			            dtpInicio.Text= sistema.Inicio;
+			            dtpFin.Text = sistema.Final;
 			
 			            // Habilitar el botón de actualización
 			            btnRegistrar.Enabled = false;;
@@ -122,14 +122,8 @@ namespace login
                 string rif = txtRIF.Text;
 
                 // Crear un nuevo sistema con los datos del formulario
-                Sistema nuevoSistema = new Sistema(
-                    txtEmpresa.Text,
-                    rif,
-                    txtDireccion.Text,
-                    txtAuditoria.Text,
-                    dtpInicio.Value,
-                    dtpFin.Value
-                );
+                Sistema nuevoSistema = new Sistema();
+         
 
                 // Actualizar el sistema en la colección
                 coleccionSistemas.Actualizar(rif, nuevoSistema);

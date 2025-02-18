@@ -18,14 +18,13 @@ namespace login
 	        Femenino,
 	       
 	    }
-		private const string arch_auditores = @"auditores.bin"; // Ruta del archivo
+		private readonly string arch_auditores = @"auditores.bin"; // Ruta del archivo
 		private List<Auditor> auditoresList = new List<Auditor>();
 		public gestionAu()
 		{
 			
 			InitializeComponent();
-			eliminarbt.Enabled = false;
-    		modificarbt.Enabled = false;	
+			eliminarbt.Enabled = false;	
     		limpiarauditorbt.Enabled = true;
     		buscaraauditorbt.Enabled = true;
     		CargarAuditores();
@@ -136,6 +135,7 @@ namespace login
 		    if (!string.IsNullOrWhiteSpace(cedula))
 		    {
                 EliminarAuditor(cedula);
+                LimpiarCampos();
             }
             else
             {
@@ -225,7 +225,6 @@ namespace login
 			
 			            guardarAuditor.Enabled = false;
 			            eliminarbt.Enabled = true;
-			            modificarbt.Enabled = true;
 			            buscaraauditorbt.Enabled = false;
 			            limpiarauditorbt.Enabled = true;
 			        }
@@ -237,56 +236,13 @@ namespace login
 		}
 		
 		
-		//boton modificar
-		void ModificarbtClick(object sender, EventArgs e)
-		{
-			// Validar que la cédula esté ingresada
-			    if (string.IsNullOrWhiteSpace(cedulatb.Text))
-			    {
-			        MessageBox.Show("Por favor, ingrese la cédula del auditor a modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			        return;
-			    }
-				string cedula = cedulatb.Text;
-			    // Leer el archivo y buscar el auditor
-			    string[] lines = File.ReadAllLines(arch_auditores);
-			    MessageBox.Show(lines.Length.ToString());
-			    string auditorData = lines.FirstOrDefault(line => line.StartsWith(cedula + ","));
-			
-			    if (auditorData != null)
-			    {
-			        // Separar los datos del auditor
-			        string[] data = auditorData.Split(',');
-			
-			        // Modificar el título y la dirección
-			        data[3] = direcciontb.Text; // Nueva dirección
-			        data[4] = titulotb.Text; // Nuevo título
-			
-			        // Crear una nueva línea con los datos modificados
-			        string modifiedAuditorData = string.Join(",", data);
-			
-			        // Reemplazar la línea en el archivo
-			        lines[Array.IndexOf(lines, auditorData)] = modifiedAuditorData;
-			        File.WriteAllLines(arch_auditores, lines);
-			
-			        MessageBox.Show("Auditor modificado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);			         
-			        
-			    }
-			    else
-			    {
-			        MessageBox.Show("Auditor no encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			    }
-			    eliminarbt.Enabled = true;
-    			buscaraauditorbt.Enabled = false;
-    			guardarAuditor.Enabled = true;
-			}
-		
-		
 		//boton limpiar
 		void LimpiarauditorbtClick(object sender, EventArgs e)
 		{
 			LimpiarCampos();
 			buscaraauditorbt.Enabled = true;
-			buscaraauditorbt.Enabled = true;
+			guardarAuditor.Enabled = true;
+			eliminarbt.Enabled = false;
 		}
 		
 		//bototon volver submenu

@@ -28,7 +28,6 @@ namespace login
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Button guardarAuditor;
-		private System.Windows.Forms.Button modificarbt;
 		private System.Windows.Forms.Button buscaraauditorbt;
 		private System.Windows.Forms.Button limpiarauditorbt;
 		private System.Windows.Forms.Label label8;
@@ -78,7 +77,6 @@ namespace login
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.guardarAuditor = new System.Windows.Forms.Button();
-			this.modificarbt = new System.Windows.Forms.Button();
 			this.buscaraauditorbt = new System.Windows.Forms.Button();
 			this.limpiarauditorbt = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
@@ -228,7 +226,7 @@ namespace login
 			// guardarAuditor
 			// 
 			this.guardarAuditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.guardarAuditor.Location = new System.Drawing.Point(94, 372);
+			this.guardarAuditor.Location = new System.Drawing.Point(125, 372);
 			this.guardarAuditor.Name = "guardarAuditor";
 			this.guardarAuditor.Size = new System.Drawing.Size(102, 36);
 			this.guardarAuditor.TabIndex = 21;
@@ -236,21 +234,10 @@ namespace login
 			this.guardarAuditor.UseVisualStyleBackColor = true;
 			this.guardarAuditor.Click += new System.EventHandler(this.GuardarAuditorClick);
 			// 
-			// modificarbt
-			// 
-			this.modificarbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.modificarbt.Location = new System.Drawing.Point(341, 372);
-			this.modificarbt.Name = "modificarbt";
-			this.modificarbt.Size = new System.Drawing.Size(123, 36);
-			this.modificarbt.TabIndex = 22;
-			this.modificarbt.Text = "MODIFICAR";
-			this.modificarbt.UseVisualStyleBackColor = true;
-			this.modificarbt.Click += new System.EventHandler(this.ModificarbtClick);
-			// 
 			// buscaraauditorbt
 			// 
 			this.buscaraauditorbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buscaraauditorbt.Location = new System.Drawing.Point(217, 372);
+			this.buscaraauditorbt.Location = new System.Drawing.Point(262, 372);
 			this.buscaraauditorbt.Name = "buscaraauditorbt";
 			this.buscaraauditorbt.Size = new System.Drawing.Size(102, 36);
 			this.buscaraauditorbt.TabIndex = 23;
@@ -261,7 +248,7 @@ namespace login
 			// limpiarauditorbt
 			// 
 			this.limpiarauditorbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.limpiarauditorbt.Location = new System.Drawing.Point(482, 372);
+			this.limpiarauditorbt.Location = new System.Drawing.Point(396, 372);
 			this.limpiarauditorbt.Name = "limpiarauditorbt";
 			this.limpiarauditorbt.Size = new System.Drawing.Size(102, 36);
 			this.limpiarauditorbt.TabIndex = 24;
@@ -305,7 +292,7 @@ namespace login
 			// eliminarbt
 			// 
 			this.eliminarbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.eliminarbt.Location = new System.Drawing.Point(605, 372);
+			this.eliminarbt.Location = new System.Drawing.Point(535, 372);
 			this.eliminarbt.Name = "eliminarbt";
 			this.eliminarbt.Size = new System.Drawing.Size(102, 36);
 			this.eliminarbt.TabIndex = 28;
@@ -426,7 +413,6 @@ namespace login
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.limpiarauditorbt);
 			this.Controls.Add(this.buscaraauditorbt);
-			this.Controls.Add(this.modificarbt);
 			this.Controls.Add(this.guardarAuditor);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.label6);

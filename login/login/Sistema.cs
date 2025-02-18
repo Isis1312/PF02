@@ -25,14 +25,9 @@ namespace login
         public string Inicio { get { return inicio; } set { inicio = value; } } // Corrección aquí
         public string Final { get { return final; } set { final = value; } }
             
-        public Sistema(string empresa, string rif, string direccion, string auditoria, string inicio, string final)
+        public Sistema()
         {
-            Empresa = empresa;
-            RIF = rif;
-            Direccion = direccion;
-            Auditoria = auditoria;
-            Inicio = inicio;
-            Final = final;
+            
         }
     }
 	
